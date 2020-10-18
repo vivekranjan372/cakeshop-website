@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipe of cake</title>
+
+    <style>
+
+ * {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.pagecontent {
+    padding-left: 50px;
+    padding-right: 50px;
+   background: url('/static/images/woodback.jpg');
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:50px;
+    font-weight: bold;
+    line-height:200%;
+    color: blue;
+}
+
+h2 {
+   font-family: Arial, Helvetica, sans-serif;
+    font-size:30px;
+    font-weight: bold;
+    line-height:200%;
+    color: black;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20px;
+    line-height:150%;
+    color: blue;
+}
+
+
+li {
+     font-family: Arial, Helvetica, sans-serif;
+    font-size:17px;
+    line-height:150%;
+    color: black;
+}
+.zoom{
+ transition: width 4s, height 4s;
+}
+.zoom:hover {
+  width: 700px;
+  height: 800px;
+}
+.container{
+ width:80%;
+ padding-left:50px;
+}
+
+.addtocart, .buy {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: red;
+  text-align: center;
+  cursor: pointer;
+  width: 20%;
+  font-size: 18px;
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+   {% load static %}
+  <div>
+    {% include 'navbar.html' %}
+  </div>
+ <div class="pagecontent">
+        <h2>CAKE DETAILS</h2>
+        <hr />
+       {%if cake_desc%}
+     {% for c in cake_desc%}
+
+     <a href="/checkout1/">  <img src="{{c.cake_image}}"  class="zoom" height="600px" width="500px"  /></a>
+     <button class="addtocart"><a href="/basket/{{c.id}}">Add to Cart</a></button>
+     <button class="buy"><a href="/basket/{{c.id}}">Buy</a></button> </br>
+     <button  style="width:120px;text-size:inherit;height:50px;margin-top:30px; " class="btn btn-primary"><span>&#8377</span> {{c.cake_price}}</button>
+        <hr />
+
+     <div class="container">
+
+         <h3>Cake Name</h3>
+        <h2>{{c.cake_name}}</h2>
+     <hr/>
+<h3>Cake Description</h3>
+
+         <ul>
+             <li>{{c.cake_description}}</li>
+         </ul>
+               <hr />
+        <h3>Ingredients</h3>
+        <ul>
+          <li>{{c.cake_ingredients}}</li>
+        </ul>
+        <hr />
+        <h3>Directions</h3>
+        <ol>
+           <li>{{c.cake_method}}</li>
+
+        </ol>
+    </div>
+</div>
+    {%endfor%}
+     {%endif%}
+<div>
+    {% include 'footer.html' %}
+</div>
+
+
+</body>
+</html>

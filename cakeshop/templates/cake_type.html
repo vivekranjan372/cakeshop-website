@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+margin:0;
+  background-color: pink;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+{% load static %}
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>VARIETIES OF CAKE</h1>
+<hr>
+
+
+
+<!-- Portfolio Gallery Grid -->
+        <div class="row">
+            {%if cakeinfo%}
+                {%for c in cakeinfo%}
+        <div class="column">
+            <div class="content" align="center">
+
+                <a href="/recipe/{{c.id}}"><img src="{{c.cake_image}}" style="width:100%" /> </a> <h3 >{{c.cake_name}}</h3>
+           <a href="/basket/" class="btn btn-primary"><span>&#8377</span> {{c.cake_price}}</a>
+                      </button>
+                <p class="buttons"><a href="/recipe/{{c.id}}"  class="btn btn-outline-secondary" style="margin-top:14px">View detail</a></p>
+
+            </div>
+              </div>
+             {%endfor%}
+        {%else%}
+        <h4 align="center">you have no any products yet..</h4>
+                {%endif%}
+    </div>
+
+<!-- END MAIN -->
+</div>
+
+</body>
+</html>

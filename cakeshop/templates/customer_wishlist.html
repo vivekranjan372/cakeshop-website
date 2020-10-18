@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {%load static%}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>wishlist</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+     <link rel="stylesheet" href="{%static 'vendor\\bootstrap\\css\\bootstrap.min.css'%}">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="{%static 'vendor\\font-awesome\\css\\font-awesome.min.css'%}">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="{% static 'vendor\\owl.carousel\\assets\\owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor\\owl.carousel\\assets\\owl.theme.default.css' %}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{%static 'css\\style.default.css'%}" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{%static 'css\\custom.css'%}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- navbar-->
+ {%include 'navbar.html'%}
+    <div id="all">
+      <div id="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- breadcrumb-->
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li aria-current="page" class="breadcrumb-item active">My wishlist</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="col-lg-3">
+              <!--
+              *** CUSTOMER MENU ***
+              _________________________________________________________
+              -->
+              <div class="card sidebar-menu">
+                <div class="card-header">
+                  <h3 class="h4 card-title">Customer section</h3>
+                </div>
+                <div class="card-body">
+                  <ul class="nav nav-pills flex-column"><a href="/customer_orders/" class="nav-link ">
+                    <i class="fa fa-list"></i> My orders</a><a href="/customer_wishlist/" class="nav-link active">
+                    <i class="fa fa-heart"></i> My wishlist</a><a href="/customer_account/" class="nav-link">
+                    <i class="fa fa-user"></i> My account</a>
+                          <a href="/sell_cake/" class="nav-link">
+                      <i class="fa fa-shopping-cart"></i>Sale Cake</a>
+                    <a href="/logout/" class="nav-link"><i class="fa fa-sign-out"></i> Logout</a></ul>
+                </div>
+              </div>
+              <!-- /.col-lg-3-->
+              <!-- *** CUSTOMER MENU END ***-->
+            </div>
+            <div id="wishlist" class="col-lg-9">
+              <div class="box">
+                <h1>My wishlist</h1>
+
+              </div>
+              <div class="row products">
+                <div class="col-lg-3 col-md-4">
+                  <div class="product">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="/cake_type/"><img src="{% static 'images\\caketype1.jpg'%}" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="detail.html"><img src="{% static 'images\\caketype1.jpg'%}" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="/cake_type/" class="invisible"><img src="{% static 'images\\caketype1.jpg'%}" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3><a href="/cake_type/">Speckled Malted Coconut Cake</a></h3>
+                      <p class="price">
+                        &#8377 143.00
+                      </p>
+                      <p class="buttons"><a href="/cake_type/" class="btn btn-outline-secondary">View detail</a>
+                        <a href="/basket/" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a></p>
+                    </div>
+                    <!-- /.text-->
+                  </div>
+                  <!-- /.product            -->
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="product">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="/cake_type/"><img src="{% static 'images\\caketype2.jpg'%}" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="/cake_type/"><img src="{% static 'images\\caketype2.jpg'%}" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="/cake_type/" class="invisible"><img src="{% static 'images\\caketype2.jpg'%}" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3><a href="/cake_type/">Strawberry-Angel Food Layer Cake</a></h3>
+                      <p class="price">
+                  &#8377 143
+                      </p>
+                      <p class="buttons"><a href="/cake_type/" class="btn btn-outline-secondary">View detail</a>
+                        <a href="/basket/" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a></p>
+                    </div>
+
+                    <!-- /.ribbon-->
+                  </div>
+                  <!-- /.product            -->
+                </div>
+                     <div class="col-lg-3 col-md-4">
+                  <div class="product">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="/cake_type/"><img src="{% static 'images\\caketype3.jpg'%}" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="/cake_type/"><img src="{% static 'images\\caketype3.jpg'%}" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="/cake_type/" class="invisible"><img src="{% static 'images\\caketype3.jpg'%}" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3><a href="/cake_type/">Strawberry-Angel Food Layer Cake</a></h3>
+                      <p class="price">
+                  &#8377 143
+                      </p>
+                      <p class="buttons"><a href="/cake_type/" class="btn btn-outline-secondary">View detail</a>
+                        <a href="/basket/" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a></p>
+                    </div>
+
+                    <!-- /.ribbon-->
+                  </div>
+                  <!-- /.product            -->
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="product">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="/cake_type/"><img src="{% static 'images\\caketype4.jpg'%}" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="/cake_type/"><img src="{% static 'images\\caketype4.jpg'%}" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="/cake_type/" class="invisible"><img src="{% static 'images\\caketype4.jpg'%}" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3><a href="detail.html">Raspberry Pink Velvet Cake</a></h3>
+                      <p class="price">
+                        &#8377 140
+                      </p>
+                      <p class="buttons"><a href="/cake_type/" class="btn btn-outline-secondary">View detail</a>
+                        <a href="/cake_type/" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a></p>
+                    </div>
+                    <!-- /.text-->
+                  </div>
+                  <!-- /.product            -->
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="product">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="/cake_type/"><img src="{% static 'images\\caketype5.jpg'%}" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="/cake_type/"><img src="{% static 'images\\caketype5.jpg'%}" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="/cake_type/" class="invisible"><img src="{% static 'images\\caketype5.jpg'%}" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3><a href="/cake_type/">Cookies and Ice Cream Cake</a></h3>
+                      <p class="price">
+                        &#8377 200
+                      </p>
+                      <p class="buttons"><a href="/cake_type/" class="btn btn-outline-secondary">View detail</a>
+                        <a href="/basket/" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a></p>
+                    </div>
+                    <!-- /.text-->
+
+                    <!-- /.ribbon-->
+                  </div>
+                  <!-- /.product            -->
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="product">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="/cake_type/"><img src="{% static 'images\\caketype6.jpg'%}" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="/cake_type/"><img src="{% static 'images\\caketype6.jpg'%}" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="/cake_type/" class="invisible"><img src="{% static 'images\\caketype6.jpg'%}" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3><a href="/cake_type/">Froot Loops Cake</a></h3>
+                      <p class="price">
+                        &#8377 200
+                      </p>
+                      <p class="buttons"><a href="/cake_type/" class="btn btn-outline-secondary">View detail</a>
+                        <a href="/basket/" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a></p>
+                    </div>
+                    <!-- /.text-->
+
+                    <!-- /.ribbon-->
+                  </div>
+                  <!-- /.product            -->
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="product">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="/cake_type/"><img src="{% static 'images\\caketype7.jpg'%}" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="/cake_type/"><img src="{% static 'images\\caketype7.jpg'%}" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="/cake_type/" class="invisible"><img src="{% static 'images\\caketype7.jpg'%}" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3><a href="/cake_type/">Vanilla Sheet Cake with Chocolate-Cinnamon Filling</a></h3>
+                      <p class="price">
+               &#8377 300
+                      </p>
+                      <p class="buttons"><a href="/cake_type/" class="btn btn-outline-secondary">View detail</a>
+                        <a href="/basket/" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a></p>
+                    </div>
+                    <!-- /.text-->
+
+                    <!-- /.ribbon-->
+                  </div>
+                  <!-- /.product            -->
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <div class="product">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="cake_type//"><img src="{% static 'images\\caketype8.jpg'%}" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="/cake_type/"><img src="{% static 'images\\caketype8.jpg'%}" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="/cake_type/" class="invisible"><img src="{% static 'images\\caketype8.jpg'%}" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3><a href="cake_type">Lemon-Coconut Cake</a></h3>
+                      <p class="price">
+                      &#8377 255
+                      </p>
+                      <p class="buttons"><a href="/cake_type/" class="btn btn-outline-secondary">View detail</a>
+                          <a href="/basket/" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a></p>
+                    </div>
+                    <!-- /.text-->
+                  </div>
+                  <!-- /.product            -->
+                </div>
+                <!-- /.products-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- JavaScript files-->
+      <script src="{% static 'vendor\\jquery\\jquery.min.js'%}"></script>
+    <script src="{%static 'vendor\\bootstrap\\js\\bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'vendor\\jquery.cookie\\jquery.cookie.js'%}"> </script>
+    <script src="{%static 'vendor\\owl.carousel\\owl.carousel.min.js'%}"></script>
+    <script src="{%static 'vendor\\owl.carousel2.thumbs\\owl.carousel2.thumbs.js'%}"></script>
+    <script src="{%static 'js\\front.js'%}"></script>
+  </body>
+</html>
